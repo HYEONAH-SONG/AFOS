@@ -1,18 +1,20 @@
 # 1주차 - AWS & 가상서버
 
-#### [목차]
+##### [목차]
 
-[:ballot_box_with_check: <u>클라우드란</u>?](#클라우드란?)
+[:ballot_box_with_check: <u>클라우드란</u>?](###1.-클라우드란?)
 
-[:ballot_box_with_check: <u>AWS 클라우드</u>](#AWS-클라우드)
+[:ballot_box_with_check: <u>AWS 클라우드</u>](###2.-AWS-클라우드)
 
-[:ballot_box_with_check: <u>실습</u>](#실습)
+[:ballot_box_with_check: <u>실습</u>](###3.-실습)
+
+##### [요약]
+
+- 클라우드 & AWS 소개
+- IaaS 중 EC2(가상서버)를 배포하고 사용
 
 <hr>
-
-#클라우드란?
-
-### 1.클라우드란?
+### 1. 클라우드란?
 
 - 클라우드는 인터넷을 통해서 언제 어디서든지 원하는 때 원하는 만큼의 **IT리소스**(컴퓨팅, 스토리지, 네트워크)를 손쉽게 사용할 수 있게 하는 서비스를 의미한다.
 
@@ -67,8 +69,6 @@
   
 
 ![](https://github.com/HYEONAH-SONG/AWS_Practice/blob/master/img/week1/Cloud%20Service%20Catagory.png?raw=true)
-
-#AWS 클라우드
 
 ### 2. AWS 클라우드
 
