@@ -2,11 +2,11 @@
 
 ##### [목차]
 
-[:ballot_box_with_check: <u>클라우드란</u>?](##1.-클라우드란?)
+[:ballot_box_with_check: <u>클라우드란</u>?](##1-클라우드란?)
 
-[:ballot_box_with_check: <u>AWS 클라우드</u>](##2.-AWS-클라우드)
+[:ballot_box_with_check: <u>AWS 클라우드</u>](##2-AWS-클라우드)
 
-[:ballot_box_with_check: <u>실습</u>](##3.-실습)
+[:ballot_box_with_check: <u>실습</u>](##3-실습)
 
 ##### [요약]
 
@@ -14,7 +14,7 @@
 - IaaS 중 EC2(가상서버)를 배포하고 사용
 
 
-##1. 클라우드란?
+## 1. 클라우드란?
 
 
 - 클라우드는 인터넷을 통해서 언제 어디서든지 원하는 때 원하는 만큼의 **IT리소스**(컴퓨팅, 스토리지, 네트워크)를 손쉽게 사용할 수 있게 하는 서비스를 의미한다.
@@ -71,7 +71,7 @@
 
 ![](https://github.com/HYEONAH-SONG/AWS_Practice/blob/master/img/week1/Cloud%20Service%20Catagory.png?raw=true)
 
-##2. AWS 클라우드
+## 2. AWS 클라우드
 
 - AWS(Amazon Web Services)는 전 세계적으로 분포한 데이터 센터에서 다양한 서비스를 제공하고 있는 클라우드 플랫폼이다. 
 - AWS 자원 사용 방법 
@@ -81,7 +81,7 @@
 
 
 
-##3. 실습
+## 3. 실습
 
 - ##### AWS EC2 인스턴스를 배포 후 해당 인스턴스에 웹을 통하여 SSH 접속을 하고, 웹 서비스를 설치 및 확인하는 실습 ⇒ AWS에서 제공하는 SSH 사용
 
