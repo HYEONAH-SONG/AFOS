@@ -2,18 +2,18 @@
 
 ##### [목차]
 
-[:ballot_box_with_check: <u>클라우드란</u>?](##1.-클라우드란?)
+[:ballot_box_with_check: <u>클라우드란</u>?](#1-클라우드란?)
 
-[:ballot_box_with_check: <u>AWS 클라우드</u>](##2.-AWS-클라우드)
+[:ballot_box_with_check: <u>AWS 클라우드</u>](#2-AWS-클라우드)
 
-[:ballot_box_with_check: <u>실습</u>](##3.-실습)
+[:ballot_box_with_check: <u>실습</u>](#3-실습)
 
 ##### [요약]
 
 - 클라우드 & AWS 소개
 - IaaS 중 EC2(가상서버)를 배포하고 사용
 
-<hr>
+
 ## 1. 클라우드란?
 
 
