@@ -40,15 +40,17 @@
      > 1. #### 1대 서버에 모든 서비스 구성
      >
      >    - 1대의 인스턴스에 Web + PHP + DB 구성 → 부하 문제 발생 가능
-     >      ![]()
+     >      ![](https://github.com/HYEONAH-SONG/AFOS/blob/master/img/week9/week9-1.png?raw=true)
      >
      > 2. #### 2대 EC2로 구성
      >
      >    - Web/PHP 인스턴스 + MariaDB 인스턴스 구성
+     >      ![](https://github.com/HYEONAH-SONG/AFOS/blob/master/img/week9/week9-2.png?raw=true)
      >
      > 3. #### 1대의 EC2와 AWS RDS로 구성
      >
      >    - Web/PHP 인스턴스(EFS) + AWS RDS(DB)로 구성
+     >      ![](https://github.com/HYEONAH-SONG/AFOS/blob/master/img/week9/week9-3.png?raw=true)
 
    - ### WooCommerce :shopping_cart:
 
@@ -58,9 +60,11 @@
 
    - CloudFormation 스택 생성 - [링크](https://console.aws.amazon.com/cloudformation/home?region=ap-northeast-2#/stacks/new?stackName=WPLab&templateURL=https:%2F%2Fs3.ap-northeast-2.amazonaws.com%2Fcloudformation.cloudneta.net%2FWordpress%2Faws-wordpress-db2.yaml) 클릭 후 템플릿 파일로 기본 환경 자동 배포 된다
      - 파라미터(KeyName - 자신의 SSH 키 선택) **다음** 클릭 →  **다음** 클릭 → **스택 생성** 클릭
+       ![](https://github.com/HYEONAH-SONG/AFOS/blob/master/img/week9/week9-4.PNG?raw=true)
    - 1대의 인스턴스에 Web + PHP + DB 구성
+     ![](https://github.com/HYEONAH-SONG/AFOS/blob/master/img/week9/week9-1.png?raw=true)
 
-   1. 웹서버 설치
+   1. #### 웹서버 설치
 
       ```shell
       # 관리자 전환
@@ -79,7 +83,9 @@
       curl EC2_Public_IP
       ```
 
-   2. PHP 설치 → PHP Extensions 설치
+      ![](https://github.com/HYEONAH-SONG/AFOS/blob/master/img/week9/week9-5.PNG?raw=true)
+
+   2. #### PHP 설치 → PHP Extensions 설치
 
       ```shell
       # 설치(AWS 내부 존재)
@@ -132,7 +138,7 @@
       
       ```
 
-   3. Maria DB 설치
+   3. #### Maria DB 설치
 
       ```shell
       # 설치
@@ -169,7 +175,7 @@
       mysql --version
       ```
 
-   4. Wordpress v5.8 (KR) 설치
+   4. #### Wordpress v5.8 (KR) 설치
 
       ```shell
       # 다운로드
@@ -207,21 +213,32 @@
       systemctl restart httpd
       ```
 
-   5. Wordpress 웹 접속하여 관리자 계정 정보 입력 http://EC2_Public_IP (인스턴스 공인 IP로 웹 접속)
+   5. #### Wordpress 웹 접속하여 관리자 계정 정보 입력 http://EC2_Public_IP (인스턴스 공인 IP로 웹 접속)
 
-   6. [Wordpress] 첫 글 작성(새로 추가) - 이미지 삽입  → 발행 후 글 확인
+      ![](https://github.com/HYEONAH-SONG/AFOS/blob/master/img/week9/week9-6.PNG?raw=true)
 
-   7. [Wordpress] 외모 - 새로운 테마 추가 → 시드니(sydney) 설치 후 활성화 2~3분 정도 소요 ⇒ 웹 접속 확인
+   6. #### [Wordpress] 첫 글 작성(새로 추가) - 이미지 삽입  → 발행 후 글 확인
+
+      ![](https://github.com/HYEONAH-SONG/AFOS/blob/master/img/week9/week9-7.PNG?raw=true)
+
+
+      ![](https://github.com/HYEONAH-SONG/AFOS/blob/master/img/week9/week9-9.PNG?raw=true)
+
+   7. #### [Wordpress] 외모 - 새로운 테마 추가 → 시드니(sydney) 설치 후 활성화 2~3분 정도 소요 ⇒ 웹 접속 확인
+
+      ![](https://github.com/HYEONAH-SONG/AFOS/blob/master/img/week9/week9-10.PNG?raw=true)
 
       - Starter Sites → Plumber 클릭 후 Import → Import 클릭
+        
 
 3. ### [2안] 웹서버 & DB 서버 구성 + WooCommerce 설정
 
    - 2대 EC2로 구성 : Web/PHP 인스턴스  + MariaDB 인스턴스 구성
+     ![](https://github.com/HYEONAH-SONG/AFOS/blob/master/img/week9/week9-2.png?raw=true)
      - WebSrv : 10.1.1.10 (프라이빗 IP)
      - DBSrv : 10.1.2.20 (프라이빗 IP)
 
-   1. CloudFormation으로 배포 - Web/PHP, DB 설정 완료
+   1. #### CloudFormation으로 배포 - Web/PHP, DB 설정 완료
 
       - UserData 참고
 
@@ -285,24 +302,31 @@
         systemctl restart mariadb
         ```
 
-   2. Wordpress 웹 접속하여 관리자 계정 정보 입력 
+   2. #### Wordpress 웹 접속하여 관리자 계정 정보 입력 
 
-   3. WooCommerce(v5.5.1) 다운로드 - [링크](https://downloads.wordpress.org/plugin/woocommerce.5.5.1.zip)
+      ![](https://github.com/HYEONAH-SONG/AFOS/blob/master/img/week9/week9-11.PNG?raw=true)
 
-   4. [Wordresss] 플러그인 새로 추가 - 플러그인 업로드 - 다운 받은 WooCommerce 선택 → 지금 설치 → 플러그인 활성화
+   3. #### WooCommerce(v5.5.1) 다운로드 - [링크](https://downloads.wordpress.org/plugin/woocommerce.5.5.1.zip)
 
-   5. [Wordresss - 우커머스] 상점 설정 → [테마] Storefront 선택 → Storefront 로 상점 디자인하기 시작해봅시다! → 시작해봅시다! 클릭
+   4. #### [Wordresss] 플러그인 새로 추가 - 플러그인 업로드 - 다운 받은 WooCommerce 선택 → 지금 설치 → 플러그인 활성화
 
-   6. [Wordress - 우커머스] 상품 추가
+      ![](https://github.com/HYEONAH-SONG/AFOS/blob/master/img/week9/week9-12.PNG?raw=true)
+
+   5. #### [Wordresss - 우커머스] 상점 설정 → [테마] Storefront 선택 → Storefront 로 상점 디자인하기 시작해봅시다! → 시작해봅시다! 클릭
+
+      ![](https://github.com/HYEONAH-SONG/AFOS/blob/master/img/week9/week9-14.PNG?raw=true)
+
+   6. #### [Wordress - 우커머스] 상품 추가
 
 4. ### [3안] 웹서버(EFS) & AWS RDS 구성
 
    - 1대 EC2(EFS)와 AWS RDS(DB)로 구성 : Web/PHP 인스턴스 + AWS RDS(DB)로 구성
+     ![](https://github.com/HYEONAH-SONG/AFOS/blob/master/img/week9/week9-3.png?raw=true)
    - WebSrv2 : 10.1.1.20 + EFS(/var/www/wordpress)
-   - AWS RDS
-
-   1. AWS RDS(MySQL) 배포 : RDS → 데이터베이스 생성 클릭 → 데이터베이스 생성 4분 정도 소요
-
+- AWS RDS
+   
+1. #### AWS RDS(MySQL) 배포 : RDS → 데이터베이스 생성 클릭 → 데이터베이스 생성 4분 정도 소요
+   
       ```
       # 별로 언급이 없는 부분은 기본값 설정입니다!
       생성 방식 : **표준 생성**
@@ -319,12 +343,12 @@
       - 초기 데이터베이스 이름 : **wordpressdb**
       - DB 파라미터 그룹 : ****##-**mydbparametergroup**-## 포함된것 선택
       - 자동 백업 활성화 : **Uncheck**
-      ```
-
-      ⇒ 생성 후 연결 & 보안 탭 메뉴에 엔드포인트(접속 주소) 메모!
-
-   2. [WebSrv2] EFS 확인 및 RDS 엔드포인트 주소 설정 및 확인
-
+   ```
+   
+   ⇒ 생성 후 연결 & 보안 탭 메뉴에 엔드포인트(접속 주소) 메모!
+   
+2. #### [WebSrv2] EFS 확인 및 RDS 엔드포인트 주소 설정 및 확인
+   
       ```shell
       # 관리자 전환
       sudo su -
@@ -342,7 +366,7 @@
       # DB 접속 테스트
       mysql -h $RDS -uroot -pqwe12345 -e 'show databases;'
       mysql -h $RDS -uroot -pqwe12345
-      ```
-
-   3. Wordpress 웹에 접속하여 관리자 계정 정보 입력
+   ```
+   
+   3. #### Wordpress 웹에 접속하여 관리자 계정 정보 입력
 
