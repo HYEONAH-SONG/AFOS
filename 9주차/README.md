@@ -40,17 +40,17 @@
      > 1. #### 1대 서버에 모든 서비스 구성
      >
      >    - 1대의 인스턴스에 Web + PHP + DB 구성 → 부하 문제 발생 가능
-     >      ![](https://github.com/HYEONAH-SONG/AFOS/blob/master/img/week9/week9-1.png?raw=true)
+     >    - ![](https://github.com/HYEONAH-SONG/AFOS/blob/master/img/week9/week9-1.png?raw=true)
      >
      > 2. #### 2대 EC2로 구성
      >
      >    - Web/PHP 인스턴스 + MariaDB 인스턴스 구성
-     >      ![](https://github.com/HYEONAH-SONG/AFOS/blob/master/img/week9/week9-2.png?raw=true)
+     >    - ![](https://github.com/HYEONAH-SONG/AFOS/blob/master/img/week9/week9-2.png?raw=true)
      >
      > 3. #### 1대의 EC2와 AWS RDS로 구성
      >
      >    - Web/PHP 인스턴스(EFS) + AWS RDS(DB)로 구성
-     >      ![](https://github.com/HYEONAH-SONG/AFOS/blob/master/img/week9/week9-3.png?raw=true)
+     >    - ![](https://github.com/HYEONAH-SONG/AFOS/blob/master/img/week9/week9-3.png?raw=true)
 
    - ### WooCommerce :shopping_cart:
 
@@ -60,9 +60,9 @@
 
    - CloudFormation 스택 생성 - [링크](https://console.aws.amazon.com/cloudformation/home?region=ap-northeast-2#/stacks/new?stackName=WPLab&templateURL=https:%2F%2Fs3.ap-northeast-2.amazonaws.com%2Fcloudformation.cloudneta.net%2FWordpress%2Faws-wordpress-db2.yaml) 클릭 후 템플릿 파일로 기본 환경 자동 배포 된다
      - 파라미터(KeyName - 자신의 SSH 키 선택) **다음** 클릭 →  **다음** 클릭 → **스택 생성** 클릭
-       ![](https://github.com/HYEONAH-SONG/AFOS/blob/master/img/week9/week9-4.PNG?raw=true)
+     - ![](https://github.com/HYEONAH-SONG/AFOS/blob/master/img/week9/week9-4.PNG?raw=true)
    - 1대의 인스턴스에 Web + PHP + DB 구성
-     ![](https://github.com/HYEONAH-SONG/AFOS/blob/master/img/week9/week9-1.png?raw=true)
+   - ![](https://github.com/HYEONAH-SONG/AFOS/blob/master/img/week9/week9-1.png?raw=true)
 
    1. #### 웹서버 설치
 
@@ -234,7 +234,7 @@
 3. ### [2안] 웹서버 & DB 서버 구성 + WooCommerce 설정
 
    - 2대 EC2로 구성 : Web/PHP 인스턴스  + MariaDB 인스턴스 구성
-     ![](https://github.com/HYEONAH-SONG/AFOS/blob/master/img/week9/week9-2.png?raw=true)
+   - ![](https://github.com/HYEONAH-SONG/AFOS/blob/master/img/week9/week9-2.png?raw=true)
      - WebSrv : 10.1.1.10 (프라이빗 IP)
      - DBSrv : 10.1.2.20 (프라이빗 IP)
 
@@ -321,10 +321,10 @@
 4. ### [3안] 웹서버(EFS) & AWS RDS 구성
 
    - 1대 EC2(EFS)와 AWS RDS(DB)로 구성 : Web/PHP 인스턴스 + AWS RDS(DB)로 구성
-     ![](https://github.com/HYEONAH-SONG/AFOS/blob/master/img/week9/week9-3.png?raw=true)
+   - ![](https://github.com/HYEONAH-SONG/AFOS/blob/master/img/week9/week9-3.png?raw=true)
    - WebSrv2 : 10.1.1.20 + EFS(/var/www/wordpress)
 - AWS RDS
-   
+  
 1. #### AWS RDS(MySQL) 배포 : RDS → 데이터베이스 생성 클릭 → 데이터베이스 생성 4분 정도 소요
    
       ```
