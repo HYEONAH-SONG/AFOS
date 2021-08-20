@@ -43,7 +43,7 @@
 
   >  EC2 AutoScaling - 실습: EC2 오토스케일링 설정
 
-- **9주차(8.4)**
+- [**9주차(8.4)**](./9주차/README.md)
 
   > (IaaS 기반) Wordpress & WooCommerce - 실습: 워드프레스 & 쇼핑몰 구성
 
